@@ -25,7 +25,6 @@
 #include <xen/domctl.h>
 #include <xen/xsm/flask_op.h>
 #include <mini-os/os.h>
-
 #include <caml/mlvalues.h>
 #include <caml/memory.h>
 

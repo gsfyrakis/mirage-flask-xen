@@ -19,7 +19,10 @@ PKG_CONFIG_PATH   := $(OPAM_PREFIX)/lib/pkgconfig
 MINIOS_CFLAGS     := $(shell PKG_CONFIG_PATH=$(PKG_CONFIG_PATH) pkg-config --cflags libminios-xen)
 MIRAGE_CFLAGS     := -isystem $(shell gcc -print-file-name=include) \
                       -I$(OPAM_PREFIX)/include/mirage-xen/include \
-                      -I$(OPAM_PREFIX)/include/mirage-xen/ocaml
+                      -I$(OPAM_PREFIX)/include/mirage-xen/ocaml \
+											-I/home/alpac/.opam/4.02.3/lib/ocaml \
+											-I/home/alpac/.opam/4.02.3/include/mirage-xen-ocaml/include/caml
+
 
 CFLAGS            := -nostdinc -fno-builtin $(MIRAGE_CFLAGS) $(MINIOS_CFLAGS)
 
